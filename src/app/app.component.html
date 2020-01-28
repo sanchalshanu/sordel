@@ -1,0 +1,18 @@
+<div>
+  <table class="table table-bordered">
+    <tr>
+      <th><div (click)="idsort();">ID</div></th>
+      <th><div (click)="titlesort();">TITLE</div></th>
+      <th><div (click)="authorsort();">AUTHOR</div></th>
+      <th><div (click)="yearsort();">YEAR</div></th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor ="let emp of book">
+      <td>{{emp.id}}</td>
+      <td>{{emp.title}}</td>
+      <td>{{emp.author}}</td>
+      <td>{{emp.year}}</td>
+      <td><button (click)="delete(emp);">Delete</button></td>
+    </tr>
+  </table>
+</div>
